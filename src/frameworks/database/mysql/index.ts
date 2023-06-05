@@ -1,16 +1,16 @@
 import {
-    Person, Account, Profile /*, Place, Parking, Square, SquareFraction, RelocatedSquare, Vehicle, Notification,
+    Person, Account, Profile, RefreshToken /*, Place, Parking, Square, SquareFraction, RelocatedSquare, Vehicle, Notification,
     NotificationType, Blurd, MethodPayment, Travel, TravelType, Group, Member, Point, Passenger, Stop, Service, PersonService,
     PanicButtom, Routes, LogPanicButton, Command, EquipmentType, Equipment,
-    RefreshToken, LastTracking, Score, Platform, NotificationPerson, MethodEntry, PersonPlace, Tag, TagPlace, SummaryTravel,
+    LastTracking, Score, Platform, NotificationPerson, MethodEntry, PersonPlace, Tag, TagPlace, SummaryTravel,
     GroupModule, Module, Gate, GateType, TravelRecurrent*/
 } from "./models";
 
 var entities: any =
     [
-        Person, Account, Profile /*, Place, Parking, Square, SquareFraction, RelocatedSquare, Vehicle, Notification,
+        Person, Account, Profile, RefreshToken /*, Place, Parking, Square, SquareFraction, RelocatedSquare, Vehicle, Notification,
         NotificationType, Blurd, MethodPayment, Travel, TravelType, Group, Member, Point, Passenger, Stop, Service, PersonService,
-        PanicButtom, Routes, LogPanicButton, Command, EquipmentType, Equipment, RefreshToken, LastTracking, Score, 
+        PanicButtom, Routes, LogPanicButton, Command, EquipmentType, Equipment, LastTracking, Score, 
         Platform, NotificationPerson, MethodEntry, PersonPlace, Tag, TagPlace, SummaryTravel, GroupModule, Module, Gate, GateType,
         TravelRecurrent*/
     ]

@@ -42,7 +42,11 @@ export class AuthUseCases {
 
     //Inicar sesión en app
     async signinWeb(signInWebDto: SignInWebDto, callFromGoogle: boolean = false) {
+        console.log('signInWebDto');
+        console.log(signInWebDto);
         const account = this.authFactory.signIn(signInWebDto);
+        console.log('account');
+        console.log(account);
         const result = await this.authServices.signInWeb(account, callFromGoogle);
         return successResponse("Inicio de Sesión Correcto", result);
     }

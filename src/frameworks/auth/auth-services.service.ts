@@ -120,6 +120,8 @@ export class AuthServices implements IAuthServices {
 
     //Iniciar Sesión web
     async signInWeb(account: Account, callFromGoogle: boolean = false): Promise<any> {
+        console.log('account desde signInWeb');
+        console.log(account);
         //Verificar que la cuenta existe
         if ((await this.dataServices.accounts.uniqueField({ username: [account.username] }) &&
             await this.dataServices.people.uniqueField({ identification: [account.username] })) &&
@@ -257,7 +259,13 @@ export class AuthServices implements IAuthServices {
 
     //Comprobar que la contraseña sea correcta
     private async verifyPassword(username: string, password: string, isWeb: boolean) {
+        console.log('password1 desde verifyPassword');
+        console.log(password);
         password = (isWeb) ? CryptoJS.AES.decrypt(password.toString(), 'moverU').toString(CryptoJS.enc.Utf8) : password;
+        console.log('password2 desde verifyPassword');
+        console.log(password);
+        console.log('username');
+        console.log(username);
         const [personServer, accountServer] = await Promise.all([
             this.dataServices.people.getOne([{ identification: username }, { email: username }], 'account'),
             this.dataServices.accounts.getOne({ username })
