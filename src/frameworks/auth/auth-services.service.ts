@@ -261,7 +261,7 @@ export class AuthServices implements IAuthServices {
     private async verifyPassword(username: string, password: string, isWeb: boolean) {
         console.log('password1 desde verifyPassword');
         console.log(password);
-        password = (isWeb) ? CryptoJS.AES.decrypt(password.toString(), 'moverU').toString(CryptoJS.enc.Utf8) : password;
+        // password = (isWeb) ? CryptoJS.AES.decrypt(password.toString(), 'moverU').toString(CryptoJS.enc.Utf8) : password;
         console.log('password2 desde verifyPassword');
         console.log(password);
         console.log('username');
